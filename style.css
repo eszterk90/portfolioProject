@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Major+Mono+Display&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 4rem;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Major Mono Display', monospace;
+}
+
+p {
+  font-size: 2rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #270082;
+}
+
+nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: #FAEEE7;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  color: #D22779;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 5rem;
+      grid-template-areas: "sec-1" "sec-2" "sec-3" "sec-4";
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 2fr 1fr;
+      grid-template-rows: 1fr 1fr 2fr 1fr;
+  gap: 1rem;
+}
+
+.sec-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: sec-3;
+}
+
+.sec-4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: sec-4;
+}
+
+.sec-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sec-1;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header bg-1";
+  -ms-grid-rows: 0.5fr;
+      grid-template-rows: 0.5fr;
+  -ms-grid-columns: minmax(0 50%) minmax(0 50%);
+      grid-template-columns: minmax(0 50%) minmax(0 50%);
+  background-color: #270082;
+  gap: 1rem;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2f0398;
+  padding: 4rem;
+}
+
+.header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header_container h1 {
+  font-size: 4vw;
+  color: #FAEEE7;
+}
+
+.header_container a {
+  text-decoration: none;
+  font-size: 1.8vw;
+  margin: 3rem 0;
+  color: #FA58B6;
+  background-color: #FAEEE7;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 1.4rem;
+  border-radius: .8rem;
+  -webkit-box-shadow: -1px -1px 5px #FA58B6, 1px 1px 5px #FA58B6;
+          box-shadow: -1px -1px 5px #FA58B6, 1px 1px 5px #FA58B6;
+}
+
+.bg-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: bg-1;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "shape1" "shape2" "shape3" "shape4" "shape5" "shape6";
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  padding: 4rem;
+}
+
+.shape1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: shape1;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "one two three four five six";
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 0.8fr;
+      grid-template-rows: 0.8fr;
+}
+
+.shape2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: shape2;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". two three four five six";
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 0.8fr;
+      grid-template-rows: 0.8fr;
+}
+
+.shape3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: shape3;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". . three four five six";
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 0.8fr;
+      grid-template-rows: 0.8fr;
+}
+
+.shape4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: shape4;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". . . four five six";
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 0.8fr;
+      grid-template-rows: 0.8fr;
+}
+
+.shape5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: shape5;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". . . . five six";
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 0.8fr;
+      grid-template-rows: 0.8fr;
+}
+
+.shape6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: shape6;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". . . . . six";
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 0.8fr;
+      grid-template-rows: 0.8fr;
+}
+
+.ir {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    background-color: #1c1c3c;
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    background-color: #4b4b7e;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: #24A19C;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    background-color: #1c1c3c;
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    background-color: #4b4b7e;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background: #24A19C;
+  }
+}
+
+.bg-1 .circle {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 4.5rem;
+  background-clip: border-box;
+  -webkit-animation: fade-in 3s ease-out  infinite;
+  animation: fade-in 3s ease-out infinite;
+}
+
+.sec-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sec-2;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "side_container about" "skills about";
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: 0.5fr 1fr;
+      grid-template-columns: 0.5fr 1fr;
+  gap: 1rem;
+}
+
+.side_container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: side_container;
+  background-color: #270082;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 4rem;
+}
+
+.img_container img {
+  width: 20rem;
+  border-radius: 50%;
+  margin: 0 2rem;
+}
+
+.intro h3 {
+  color: #b5b5d0;
+  font-size: 3.5rem;
+}
+
+.about {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: about;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  background-color: #D22779;
+}
+
+.about h2 {
+  font-size: 4rem;
+  padding: 2rem 0;
+  color: #2f0398;
+}
+
+.about p {
+  margin: 2rem 0;
+  color: #b5b5d0;
+}
+
+.skills {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: skills;
+  padding: 2rem;
+  background-color: #FAEEE7;
+}
+
+.skills h3 {
+  text-align: center;
+  font-size: 3.2rem;
+  padding: 2rem;
+  color: #4b4b7e;
+}
+
+.skills_container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "skill1" "skill2" "skill3" "skill4";
+  -ms-grid-columns: (18rem)[4];
+      grid-template-columns: repeat(4, 18rem);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  color: #4b4b7e;
+}
+
+.skill h4 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.skill i {
+  font-size: 6rem;
+}
+
+.star i {
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2rem;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main {
+    margin-top: 16rem;
+  }
+  .sec-1 {
+        grid-template-areas: "header";
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .bg-1 {
+    display: none;
+  }
+  .header_container h1 {
+    font-size: 8vw;
+    color: #FAEEE7;
+  }
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0, 0);
+              transform: scale(0, 0);
+      background-color: #1c1c3c;
+    }
+    50% {
+      opacity: 0.5;
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      background-color: #4b4b7e;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+      background: #270082;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0, 0);
+              transform: scale(0, 0);
+      background-color: #1c1c3c;
+    }
+    50% {
+      opacity: 0.5;
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      background-color: #4b4b7e;
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+      background: #270082;
+    }
+  }
+  .sec-2 {
+        grid-template-areas: "side_container"  "about" "skills";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1.5fr 1fr;
+  }
+  .side_container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: side_container;
+    background-color: #270082;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .skills {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: skills;
+    padding: 2rem;
+    background-color: #FAEEE7;
+  }
+  .skills h3 {
+    text-align: center;
+    font-size: 3.2rem;
+    padding: 2rem;
+    color: #4b4b7e;
+  }
+  .skills_container {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+        grid-template-areas: "skill1" "skill2" "skill3" "skill4";
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+  .skill {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #4b4b7e;
+  }
+  .skill h4 {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .skill i {
+    font-size: 6rem;
+  }
+  .star i {
+    font-size: 2.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
