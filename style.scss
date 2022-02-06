@@ -49,7 +49,7 @@ nav {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     background-color: $color-black;
     ul {
         display: inline-flex;
