@@ -184,7 +184,7 @@ main {
 .sec-1 .header_container a {
   text-decoration: none;
   font-size: 1.8vw;
-  margin-top: 4rem;
+  margin-top: 6rem;
   color: #C84B31;
   background-color: #FAEEE7;
   width: -webkit-fit-content;
@@ -728,13 +728,15 @@ footer {
   .header_container h1 {
     font-size: 8vw;
     color: #FAEEE7;
-    -webkit-animation: colorful 3s linear infinite;
-            animation: colorful 3s linear infinite;
+    -webkit-animation: colorful 3s linear 1;
+            animation: colorful 3s linear 1;
   }
   @-webkit-keyframes colorful {
     0% {
       color: #FAEEE7;
       opacity: 0;
+      -webkit-transform: scale(2);
+              transform: scale(2);
     }
     25% {
       color: #24A19C;
@@ -757,6 +759,8 @@ footer {
     0% {
       color: #FAEEE7;
       opacity: 0;
+      -webkit-transform: scale(2);
+              transform: scale(2);
     }
     25% {
       color: #24A19C;
@@ -813,6 +817,12 @@ footer {
   }
   input[type="submit"] {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */
