@@ -54,11 +54,20 @@ nav ul li a {
   color: #FAEEE7;
 }
 
+nav ul li a:hover {
+  color: #C84B31;
+}
+
 nav a {
   text-decoration: none;
   font-size: 2.5rem;
   padding: 1rem 2rem;
-  color: #D22779;
+  color: #C84B31;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: #FAEEE7;
 }
 
 main {
@@ -73,10 +82,50 @@ main {
   gap: 1rem;
 }
 
-.sec-4 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: sec-4;
+@-webkit-keyframes grow {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  20% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+  80% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  20% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+  }
+  80% {
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }
 
 .sec-1 {
@@ -94,7 +143,7 @@ main {
   gap: 1rem;
 }
 
-.header {
+.sec-1 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
@@ -117,7 +166,7 @@ main {
   padding: 4rem;
 }
 
-.header_container {
+.sec-1 .header_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,12 +176,12 @@ main {
           flex-direction: column;
 }
 
-.header_container h1 {
+.sec-1 .header_container h1 {
   font-size: 4vw;
   color: #FAEEE7;
 }
 
-.header_container a {
+.sec-1 .header_container a {
   text-decoration: none;
   font-size: 1.8vw;
   margin: 4rem 0;
@@ -145,6 +194,11 @@ main {
   border-radius: .8rem;
   -webkit-box-shadow: -1px -1px 5px #C84B31, 1px 1px 5px #C84B31;
           box-shadow: -1px -1px 5px #C84B31, 1px 1px 5px #C84B31;
+}
+
+.sec-1 .header_container a:hover {
+  -webkit-animation: grow 1.5s linear 1;
+          animation: grow 1.5s linear 1;
 }
 
 .bg-1 {
@@ -161,7 +215,7 @@ main {
   padding: 4rem;
 }
 
-.shape1 {
+.bg-1 .shape1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: shape1;
@@ -174,7 +228,7 @@ main {
       grid-template-rows: 0.8fr;
 }
 
-.shape2 {
+.bg-1 .shape2 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: shape2;
@@ -187,7 +241,7 @@ main {
       grid-template-rows: 0.8fr;
 }
 
-.shape3 {
+.bg-1 .shape3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: shape3;
@@ -200,7 +254,7 @@ main {
       grid-template-rows: 0.8fr;
 }
 
-.shape4 {
+.bg-1 .shape4 {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: shape4;
@@ -213,7 +267,7 @@ main {
       grid-template-rows: 0.8fr;
 }
 
-.shape5 {
+.bg-1 .shape5 {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: shape5;
@@ -226,7 +280,7 @@ main {
       grid-template-rows: 0.8fr;
 }
 
-.shape6 {
+.bg-1 .shape6 {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: shape6;
@@ -250,13 +304,13 @@ main {
     opacity: 0;
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
-    background-color: #161616;
+    background-color: #FAEEE7;
   }
   50% {
     opacity: 0.5;
     -webkit-transform: scale(0.5, 0.5);
             transform: scale(0.5, 0.5);
-    background-color: #282727;
+    background-color: #454343;
   }
   100% {
     opacity: 1;
@@ -271,13 +325,13 @@ main {
     opacity: 0;
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
-    background-color: #161616;
+    background-color: #FAEEE7;
   }
   50% {
     opacity: 0.5;
     -webkit-transform: scale(0.5, 0.5);
             transform: scale(0.5, 0.5);
-    background-color: #282727;
+    background-color: #454343;
   }
   100% {
     opacity: 1;
@@ -326,13 +380,13 @@ main {
   padding: 4rem;
 }
 
-.img_container img {
+.side_container .img_container img {
   width: 20rem;
   border-radius: 50%;
   margin: 0 2rem;
 }
 
-.intro h3 {
+.side_container .intro h3 {
   color: #161616;
   font-size: 3.5rem;
 }
@@ -356,12 +410,12 @@ main {
 .about h2 {
   font-size: 4rem;
   padding: 2rem 0;
-  color: #2f0398;
+  color: #FAEEE7;
 }
 
 .about p {
   margin: 2rem 0;
-  color: #454343;
+  color: #161616;
 }
 
 .skills {
@@ -379,7 +433,7 @@ main {
   color: #282727;
 }
 
-.skills_container {
+.skills .skills_container {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "skill1" "skill2" "skill3" "skill4";
@@ -389,7 +443,7 @@ main {
       grid-template-rows: 1fr;
 }
 
-.skill {
+.skills .skills_container .skill {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,15 +457,15 @@ main {
   color: #282727;
 }
 
-.skill h4 {
+.skills .skills_container .skill h4 {
   font-family: 'IBM Plex Mono', monospace;
 }
 
-.skill i {
+.skills .skills_container .skill i {
   font-size: 6rem;
 }
 
-.star i {
+.skills .skills_container .skill .star i {
   font-size: 2.5rem;
 }
 
@@ -425,7 +479,7 @@ main {
 .sec-3 h2 {
   font-size: 4rem;
   padding: 2rem 0;
-  color: #2f0398;
+  color: #FAEEE7;
   text-align: center;
 }
 
@@ -450,20 +504,27 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 33%;
+  width: calc(33% - 4rem);
   margin: 1rem;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
 }
 
-.click_here {
-  display: none;
-}
-
-.click_here a {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #FAEEE7;
-  margin: 1rem;
-  cursor: pointer;
+.projects:hover .click_here {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background-color: #161616;
+  border-radius: 0.8rem;
+  z-index: 200;
 }
 
 .project_container:hover {
@@ -483,17 +544,136 @@ main {
   opacity: 0.5;
 }
 
-.projects:hover .click_here {
-  -webkit-transform: translateY(16rem);
-          transform: translateY(16rem);
-  position: absolute;
-  display: block;
-  background-color: #161616;
-}
-
 .project_container img {
   width: 100%;
   border-radius: 0.5rem;
+}
+
+.click_here {
+  display: none;
+}
+
+.click_here a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #FAEEE7;
+  margin: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.sec-4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: sec-4;
+  background-color: #FAEEE7;
+}
+
+.sec-4 h2 {
+  font-size: 4rem;
+  padding: 2rem 0;
+  color: #24A19C;
+  text-align: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  background-color: #24A19C;
+  border-radius: 1rem;
+}
+
+form .data_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+input {
+  padding: 0.8rem 4rem;
+  border-radius: 0.8rem;
+}
+
+input[type="submit"] {
+  width: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 1rem 0;
+  font-size: 1.8rem;
+  background-color: #FAEEE7;
+  color: #161616;
+}
+
+input[type="submit"]:hover {
+  color: #FAEEE7;
+  background-color: #161616;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid #C84B31;
+  outline-style: solid;
+  outline-color: #C84B31;
+}
+
+textarea {
+  border-radius: 0.8rem;
+  padding: 1rem;
+}
+
+label {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3rem;
+  background-color: #161616;
+  color: #FAEEE7;
+}
+
+.social-links a {
+  font-size: 3.5rem;
+  margin: 1.2rem;
+}
+
+.social-links a:nth-of-type(1) {
+  color: #FAEEE7;
+}
+
+.social-links a:nth-of-type(2) {
+  color: #C84B31;
+}
+
+.social-links a:nth-of-type(3) {
+  color: #24A19C;
 }
 
 @media screen and (max-width: 800px) {
@@ -549,113 +729,16 @@ main {
     font-size: 8vw;
     color: #FAEEE7;
   }
-  @-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(0, 0);
-              transform: scale(0, 0);
-      background-color: #161616;
-    }
-    50% {
-      opacity: 0.5;
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
-      background-color: #282727;
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-      background: #270082;
-    }
-  }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-      -webkit-transform: scale(0, 0);
-              transform: scale(0, 0);
-      background-color: #161616;
-    }
-    50% {
-      opacity: 0.5;
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5);
-      background-color: #282727;
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: scale(1, 1);
-              transform: scale(1, 1);
-      background: #270082;
-    }
-  }
   .sec-2 {
         grid-template-areas: "side_container"  "about" "skills";
+    -ms-grid-rows: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1.5fr 1fr;
-        grid-template-rows: 1fr 1.5fr 1fr;
-  }
-  .side_container {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: side_container;
-    background-color: #270082;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 4rem;
-  }
-  .skills {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: skills;
-    padding: 2rem;
-    background-color: #FAEEE7;
-  }
-  .skills h3 {
-    text-align: center;
-    font-size: 3.2rem;
-    padding: 2rem;
-    color: #282727;
   }
   .skills_container {
-    display: -ms-grid;
-    display: grid;
-    place-items: center;
-        grid-template-areas: "skill1" "skill2" "skill3" "skill4";
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-  }
-  .skill {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: 2rem;
-    padding: 2rem;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: #282727;
-  }
-  .skill h4 {
-    font-family: 'IBM Plex Mono', monospace;
-  }
-  .skill i {
-    font-size: 6rem;
-  }
-  .star i {
-    font-size: 2.5rem;
   }
   .bg-2 {
     -webkit-box-orient: vertical;
@@ -667,17 +750,17 @@ main {
   .projects {
     width: 100%;
   }
-  .projects:hover .click_here {
-    -webkit-transform: translateY(20%);
-            transform: translateY(20%);
-    position: absolute;
-    display: block;
-    padding-left: 2rem;
-    background-color: #161616;
+  .click_here a {
+    font-size: 4rem;
   }
-  .project_container img {
-    width: 100%;
-    border-radius: 0.5rem;
+  form {
+    width: 90%;
+  }
+  form .data_container {
+    width: 90%;
+  }
+  input[type="submit"] {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */

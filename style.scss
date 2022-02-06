@@ -13,6 +13,7 @@ $color-blue: #270082;
 $color-lightBlue: #2f0398;
 $color-purple:#7A0BC0;
 $color-orange: #C84B31;
+$color-lightOrange: #e38875;
 $color-darkerPink: #D22779;
 $color-beige: #FAEEE7;
 $color-green: #24A19C;
@@ -50,23 +51,28 @@ nav {
     top: 0;
     z-index: 100;
     background-color: $color-black;
+    ul {
+        display: inline-flex;
+        list-style-type: none;
+        li a {
+            color: $color-beige;
+            &:hover {
+                color: $color-orange;
+            } 
+        }
+    }
+    a {
+        text-decoration: none;
+        font-size: 2.5rem;
+        padding: 1rem 2rem;
+        color: $color-orange;
+        &:hover {
+            font-weight: bold;
+            color: $color-beige;
+        }
+    }
 }
 
-nav ul {
-    display: inline-flex;
-    list-style-type: none;
-}
-
-nav ul li a {
-    color: $color-beige;
-}
-
-nav a {
-    text-decoration: none;
-    font-size: 2.5rem;
-    padding: 1rem 2rem;
-    color: $color-orange;
-}
 // main layout
 
 main {
@@ -81,11 +87,25 @@ main {
     gap: 1rem;
 }
 
-.sec-4 {
-    grid-area: sec-4;
-}
-
 // 1 Section layout 
+
+@keyframes grow {
+    0% {
+        transform: scale(1, 1);
+    }
+    20% {
+        transform: scale(0.8, 0.8);
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+    80% {
+        transform: scale(0.8, 0.8);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
 
 .sec-1 {
     grid-area: sec-1;
@@ -95,42 +115,39 @@ main {
     grid-template-columns: minmax(0 50%) minmax(0 50%);
     background-color: $color-grey;
     gap: 1rem;
+    .header {
+        grid-area: header;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-lightGrey;
+        padding: 4rem;
+    }
+    .header_container {
+        display: flex;
+        flex-direction: column;
+        & h1 {
+            font-size: 4vw;
+            color: $color-beige;
+        }
+        & a {
+            text-decoration: none;
+            font-size: 1.8vw;
+            margin: 4rem 0;
+            color: $color-orange;
+            background-color: $color-beige;
+            width: fit-content;
+            padding: 1rem 1.4rem;
+            border-radius: .8rem;
+            box-shadow: -1px -1px 5px $color-orange, 1px 1px 5px $color-orange;
+        }
+        & a:hover {
+            animation: grow 1.5s linear 1;
+        }
+    }
 }
-
-.header {
-    grid-area: header;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-lightGrey;
-    padding: 4rem;
-}
-
-.header_container {
-    display: flex;
-    flex-direction: column;
-}
-
-.header_container h1{
-    font-size: 4vw;
-    color: $color-beige;
-}
-
-.header_container a {
-    text-decoration: none;
-    font-size: 1.8vw;
-    margin: 4rem 0;
-    color: $color-pink;
-    background-color: $color-beige;
-    width: fit-content;
-    padding: 1rem 1.4rem;
-    border-radius: .8rem;
-    box-shadow: -1px -1px 5px $color-pink, 1px 1px 5px $color-pink;
-}
-
-// header background styling
 
 .bg-1 {
     grid-area: bg-1;
@@ -144,56 +161,49 @@ main {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: 100%;
     padding: 4rem;
+    & .shape1 {
+        grid-area: shape1;
+        display: grid;
+        grid-template-areas: "one two three four five six";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.8fr;
+    }
+    & .shape2 {
+        grid-area: shape2;
+        display: grid;
+        grid-template-areas: ". two three four five six";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.8fr;
+    }
+    & .shape3 {
+        grid-area: shape3;
+        display: grid;
+        grid-template-areas: ". . three four five six";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.8fr;
+    }
+    & .shape4 {
+        grid-area: shape4;
+        display: grid;
+        grid-template-areas: ". . . four five six";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.8fr;
+    }
+    & .shape5 {
+        grid-area: shape5;
+        display: grid;
+        grid-template-areas: ". . . . five six";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.8fr;
+    }
+    & .shape6 {
+        grid-area: shape6;
+        display: grid;
+        grid-template-areas: ". . . . . six";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 0.8fr;
+    }
 }
-
-.shape1 {
-    grid-area: shape1;
-    display: grid;
-    grid-template-areas: "one two three four five six";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.8fr;
-}
-
-.shape2 {
-    grid-area: shape2;
-    display: grid;
-    grid-template-areas: ". two three four five six";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.8fr;
-}
-
-.shape3 {
-    grid-area: shape3;
-    display: grid;
-    grid-template-areas: ". . three four five six";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.8fr;
-}
-
-.shape4 {
-    grid-area: shape4;
-    display: grid;
-    grid-template-areas: ". . . four five six";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.8fr;
-}
-
-.shape5 {
-    grid-area: shape5;
-    display: grid;
-    grid-template-areas: ". . . . five six";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.8fr;
-}
-
-.shape6 {
-    grid-area: shape6;
-    display: grid;
-    grid-template-areas: ". . . . . six";
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 0.8fr;
-}
-
 
 .ir {
     font: 0/0 a;
@@ -216,12 +226,12 @@ main {
     0% {
         opacity: 0;
         transform: scale(0, 0);
-        background-color: $color-black;
+        background-color: $color-beige;
     }
     50% {
         opacity: 0.5;
         transform: scale(0.5, 0.5);
-        background-color: $color-grey;
+        background-color: $color-lightGrey;
     }
     100% {
         opacity: 1;
@@ -252,7 +262,7 @@ main {
     gap: 1rem;
 }
 
-// sidecontainer
+// side_container styling 
 
 .side_container {
     grid-area: side_container;
@@ -261,20 +271,18 @@ main {
     justify-content: space-around;
     align-items: center;
     padding: 4rem;
+    .img_container img {
+        width: 20rem;
+        border-radius: 50%;
+        margin: 0 2rem;
+    }
+    .intro h3 {
+        color: $color-black;
+        font-size: 3.5rem;
+    }
 }
 
-.img_container img {
-    width: 20rem;
-    border-radius: 50%;
-    margin: 0 2rem;
-}
-
-.intro h3 {
-    color: $color-black;
-    font-size: 3.5rem;
-}
-
-// about me
+// about me styling
 
 .about {
     grid-area: about;
@@ -282,73 +290,65 @@ main {
     flex-direction: column;
     padding: 2rem;
     background-color: $color-orange;
+    h2 {
+        font-size: 4rem;
+        padding: 2rem 0;
+        color: $color-beige;
+    }
+    p {
+        margin: 2rem 0;
+        color: $color-black;
+    }
 }
 
-.about h2 {
-    font-size: 4rem;
-    padding: 2rem 0;
-    color: $color-beige;
-}
-
-.about p {
-    margin: 2rem 0;
-    color: $color-lightGrey;
-}
+// skills styling
 
 .skills {
     grid-area: skills;
     padding: 2rem;
     background-color: $color-beige;
+    h3 {
+        text-align: center;
+        font-size: 3.2rem;
+        padding: 2rem;
+        color: $color-grey;
+    }
+    .skills_container {
+        display: grid;
+        grid-template-areas: "skill1" "skill2" "skill3" "skill4";
+        grid-template-columns: repeat(4, 18rem);
+        grid-template-rows: 1fr;
+        .skill {
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            padding: 2rem;
+            text-align: center;
+            color: $color-grey;
+            h4 {
+                font-family: 'IBM Plex Mono', monospace;
+           }
+           i {
+            font-size: 6rem;
+           }
+           .star i {
+            font-size: 2.5rem;
+           }
+        }
+    }
 }
-
-.skills h3 {
-    text-align: center;
-    font-size: 3.2rem;
-    padding: 2rem;
-    color: $color-grey;
-}
-
-.skills_container {
-    display: grid;
-    grid-template-areas: "skill1" "skill2" "skill3" "skill4";
-    grid-template-columns: repeat(4, 18rem);
-    grid-template-rows: 1fr;
-}
-
-.skill {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    padding: 2rem;
-    text-align: center;
-    color: $color-grey;
-}
-
-.skill h4 {
-     font-family: 'IBM Plex Mono', monospace;
-}
-
-.skill i {
-    font-size: 6rem;
-}
-
-.star i {
-    font-size: 2.5rem;
-}
-
 
 // sec-3 styling
 
 .sec-3 {
     grid-area: sec-3;
     background-color: $color-grey;
-}
-
-.sec-3 h2 {
-    font-size: 4rem;
-    padding: 2rem 0;
-    color: $color-lightBlue;
-    text-align: center;
+    h2 {
+        font-size: 4rem;
+        padding: 2rem 0;
+        color: $color-beige;
+        text-align: center;
+    }
 }
 
 .bg-2 {
@@ -361,21 +361,25 @@ main {
 .projects {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: calc(33% - 4rem);
     margin: 1rem;
+    flex-basis: 0;
+    flex-grow: 2;
+    flex-shrink: 2;
 }
 
-.click_here {
-    display: none;
+.projects:hover .click_here {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background-color: $color-black;
+    border-radius: 0.8rem;
+    z-index: 200;
+    
 }
 
-.click_here a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: $color-beige;
-    margin: 1rem;
-    cursor: pointer;
-}
 .project_container:hover {
     position: relative;
     &::after {
@@ -391,18 +395,113 @@ main {
     }
 }
 
-.projects:hover .click_here {
-    transform: translateY(16rem);
-    position: absolute;
-    display: block;
-    background-color: $color-black;
-    
-}
-
 .project_container img {
     width: 100%;
     border-radius: 0.5rem;
 }
+
+.click_here {
+    display: none;
+    a {
+        font-size: 2rem;
+        text-decoration: none;
+        color: $color-beige;
+        margin: 1rem;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+// Section 4 styling
+
+.sec-4 {
+    grid-area: sec-4;
+    background-color: $color-beige;
+    h2 {
+        font-size: 4rem;
+        padding: 2rem 0;
+        color: $color-green;
+        text-align: center;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1.5rem auto;
+    font-size: 2rem;
+    background-color: $color-green;
+    border-radius: 1rem;
+    .data_container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+input {
+    padding: 0.8rem 4rem;
+    border-radius: 0.8rem;
+}
+
+input[type="submit"] {
+    width: 50%;
+    align-self: center;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    background-color: $color-beige;
+    color: $color-black;
+    &:hover {
+        color: $color-beige;
+        background-color: $color-black;
+    }
+}
+
+input:focus, textarea:focus {
+    border: 2px solid $color-orange;
+    outline-style: solid;
+    outline-color: $color-orange;
+}
+
+textarea {
+    border-radius: 0.8rem;
+    padding: 1rem; 
+}
+
+label {
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+// Footer section styling
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    background-color: $color-black;
+    color: $color-beige;
+}
+
+.social-links a {
+    font-size: 3.5rem;
+    margin: 1.2rem;
+    &:nth-of-type(1) {
+        color: $color-beige;
+    }
+    &:nth-of-type(2) {
+        color: $color-orange;
+    }
+    &:nth-of-type(3) {
+        color: $color-green;
+    }
+}
+
+// tablet version & mobile version
 
 @media screen and (max-width: 800px) {
     html {
@@ -418,12 +517,10 @@ main {
         height: auto;
         justify-content: center;
         padding: 2rem;
-        
-    }
-    
-    nav ul {
-        display: flex;
-        flex-direction: column;
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
     }
     
     // main layout
@@ -455,92 +552,24 @@ main {
 
     .header_container {
         padding: 2rem;
+        h1{
+            font-size: 8vw;
+            color: $color-beige;
+        }
     }
 
-    .header_container h1{
-        font-size: 8vw;
-        color: $color-beige;
-    }
-
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-            transform: scale(0, 0);
-            background-color: $color-black;
-        }
-        50% {
-            opacity: 0.5;
-            transform: scale(0.5, 0.5);
-            background-color: $color-grey;
-        }
-        100% {
-            opacity: 1;
-            transform: scale(1, 1);
-            background: $color-blue;
-        }
-    }
-        
     // Section 2 styling
     
     .sec-2 {
         grid-template-areas: "side_container" 
                              "about"
                              "skills";
+        grid-template-rows: 0.5fr 1fr 0.5fr;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1.5fr 1fr;
-    }
-    
-    // sidecontainer
-    
-    .side_container {
-        grid-area: side_container;
-        background-color: $color-blue;
-        display: flex;
-        justify-content: space-between;
-        padding: 4rem;
-    }
-    
-    .skills {
-        grid-area: skills;
-        padding: 2rem;
-        background-color: $color-beige;
-    }
-    
-    .skills h3 {
-        text-align: center;
-        font-size: 3.2rem;
-        padding: 2rem;
-        color: $color-grey;
     }
     
     .skills_container {
-        display: grid;
-        place-items: center;
-        grid-template-areas: "skill1" "skill2" "skill3" "skill4";
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-    }
-    
-    .skill {
-        display: flex;
-        flex-direction: column;
-        font-size: 2rem;
-        padding: 2rem;
-        text-align: center;
-        justify-content: center;
-        color: $color-grey;
-    }
-    
-    .skill h4 {
-         font-family: 'IBM Plex Mono', monospace;
-    }
-    
-    .skill i {
-        font-size: 6rem;
-    }
-    
-    .star i {
-        font-size: 2.5rem;
     }
 
 // sec-3 styling
@@ -554,17 +583,21 @@ main {
         width: 100%;
     }
 
-    .projects:hover .click_here {
-        transform: translateY(20%);
-        position: absolute;
-        display: block;
-        padding-left: 2rem;
-        background-color: $color-black;
+    .click_here a {
+        font-size: 4rem;
     }
 
-    .project_container img {
-        width: 100%;
-        border-radius: 0.5rem;
+    // Section 4 styling
+
+    form {
+        width: 90%;
+        .data_container {
+            width: 90%;
+        }
+    }
+
+    input[type="submit"] {
+        width: 90%;
     }
 }
 
