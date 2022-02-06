@@ -6,16 +6,17 @@
     box-sizing: border-box;
 }
 
-$color-black: #1c1c3c;
-$color-grey: #4b4b7e;
-$color-lightGrey: #b5b5d0;
+$color-black: #161616;
+$color-grey: #282727;
+$color-lightGrey: #454343;
 $color-blue: #270082;
 $color-lightBlue: #2f0398;
 $color-purple:#7A0BC0;
-$color-pink: #FA58B6;
+$color-orange: #C84B31;
 $color-darkerPink: #D22779;
 $color-beige: #FAEEE7;
 $color-green: #24A19C;
+$color-darkGreen: #346751;
 
 html {
     font-size: 62.5%;
@@ -48,7 +49,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 100;
-    background-color: $color-blue;
+    background-color: $color-black;
 }
 
 nav ul {
@@ -64,7 +65,7 @@ nav a {
     text-decoration: none;
     font-size: 2.5rem;
     padding: 1rem 2rem;
-    color: $color-darkerPink;
+    color: $color-orange;
 }
 // main layout
 
@@ -76,12 +77,8 @@ main {
                          "sec-3"
                          "sec-4";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
     gap: 1rem;
-}
-
-.sec-3 {
-    grid-area: sec-3;
 }
 
 .sec-4 {
@@ -96,7 +93,7 @@ main {
     grid-template-areas: "header bg-1";
     grid-template-rows: 0.5fr;
     grid-template-columns: minmax(0 50%) minmax(0 50%);
-    background-color: $color-blue;
+    background-color: $color-grey;
     gap: 1rem;
 }
 
@@ -107,7 +104,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $color-lightBlue;
+    background-color: $color-lightGrey;
     padding: 4rem;
 }
 
@@ -124,7 +121,7 @@ main {
 .header_container a {
     text-decoration: none;
     font-size: 1.8vw;
-    margin: 3rem 0;
+    margin: 4rem 0;
     color: $color-pink;
     background-color: $color-beige;
     width: fit-content;
@@ -133,7 +130,7 @@ main {
     box-shadow: -1px -1px 5px $color-pink, 1px 1px 5px $color-pink;
 }
 
-// background styling
+// header background styling
 
 .bg-1 {
     grid-area: bg-1;
@@ -259,9 +256,10 @@ main {
 
 .side_container {
     grid-area: side_container;
-    background-color: $color-blue;
+    background-color: $color-green;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     padding: 4rem;
 }
 
@@ -272,7 +270,7 @@ main {
 }
 
 .intro h3 {
-    color: $color-lightGrey;
+    color: $color-black;
     font-size: 3.5rem;
 }
 
@@ -283,13 +281,13 @@ main {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: $color-darkerPink;
+    background-color: $color-orange;
 }
 
 .about h2 {
     font-size: 4rem;
     padding: 2rem 0;
-    color: $color-lightBlue;
+    color: $color-beige;
 }
 
 .about p {
@@ -338,10 +336,80 @@ main {
     font-size: 2.5rem;
 }
 
-@media screen and (max-width: 900px) {
+
+// sec-3 styling
+
+.sec-3 {
+    grid-area: sec-3;
+    background-color: $color-grey;
+}
+
+.sec-3 h2 {
+    font-size: 4rem;
+    padding: 2rem 0;
+    color: $color-lightBlue;
+    text-align: center;
+}
+
+.bg-2 {
+    display: flex;
+    margin: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: 1rem;
+}
+
+.click_here {
+    display: none;
+}
+
+.click_here a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-beige;
+    margin: 1rem;
+    cursor: pointer;
+}
+.project_container:hover {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 99%;
+        background-image: linear-gradient(to bottom right, grey);
+        border-radius: 0.5rem;
+        opacity: 0.5;
+    }
+}
+
+.projects:hover .click_here {
+    transform: translateY(16rem);
+    position: absolute;
+    display: block;
+    background-color: $color-black;
+    
+}
+
+.project_container img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
     html {
         font-size: 50%;
+        scroll-padding-block-start: 18rem;
     }
+
         
     // Nav-Section Styling
     
@@ -359,8 +427,16 @@ main {
     }
     
     // main layout
-    
+
     main {
+        display: grid;
+        grid-template-areas: "sec-1"
+                             "sec-2"
+                             "sec-3"
+                             "sec-4";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 0.75fr 1fr 0.5fr;
+        gap: 1rem;
         margin-top: 16rem;
     }
     
@@ -369,12 +445,16 @@ main {
     
     .sec-1 {
         grid-template-areas: "header";
-        grid-template-rows: 1fr;
+        grid-template-rows: 0.5fr;
         grid-template-columns: 100%;
     }
 
     .bg-1 {
         display: none;
+    }
+
+    .header_container {
+        padding: 2rem;
     }
 
     .header_container h1{
@@ -400,7 +480,7 @@ main {
         }
     }
         
-    // Skills section
+    // Section 2 styling
     
     .sec-2 {
         grid-template-areas: "side_container" 
@@ -417,6 +497,7 @@ main {
         background-color: $color-blue;
         display: flex;
         justify-content: space-between;
+        padding: 4rem;
     }
     
     .skills {
@@ -461,4 +542,29 @@ main {
     .star i {
         font-size: 2.5rem;
     }
+
+// sec-3 styling
+
+    .bg-2 {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .projects {
+        width: 100%;
+    }
+
+    .projects:hover .click_here {
+        transform: translateY(20%);
+        position: absolute;
+        display: block;
+        padding-left: 2rem;
+        background-color: $color-black;
+    }
+
+    .project_container img {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
 }
+
