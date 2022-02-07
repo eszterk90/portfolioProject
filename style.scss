@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+// colors
+
 $color-black: #161616;
 $color-grey: #282727;
 $color-lightGrey: #454343;
@@ -39,7 +41,7 @@ p {
     font-size: 2rem;
 }
 
-// Nav-Section Styling
+// Navbar Styling
 
 nav {
     display: flex;
@@ -73,7 +75,7 @@ nav {
     }
 }
 
-// main layout
+// Main layout
 
 main {
     display: grid;
@@ -87,7 +89,7 @@ main {
     gap: 1rem;
 }
 
-// 1 Section layout 
+// sec-1 styling
 
 @keyframes grow {
     0% {
@@ -250,7 +252,7 @@ main {
     @include fade-in;
 }
 
-// Skills section
+// sec-2 styling
 
 .sec-2 {
     grid-area: sec-2;
@@ -414,7 +416,7 @@ main {
     }
 }
 
-// Section 4 styling
+// sec-4 styling
 
 .sec-4 {
     grid-area: sec-4;
@@ -540,7 +542,7 @@ footer {
     }
     
     
-    // 1 Section layout 
+    //  sec-1 styling 
     
     .sec-1 {
         grid-template-areas: "header";
@@ -603,7 +605,7 @@ footer {
         }
     }
 
-    // Section 2 styling
+    // sec-2 styling
     
     .sec-2 {
         grid-template-areas: "side_container" 
@@ -634,7 +636,7 @@ footer {
         font-size: 4rem;
     }
 
-    // Section 4 styling
+// Section 4 styling
 
     form {
         width: 90%;
