@@ -134,7 +134,7 @@ main {
         }
         & a {
             text-decoration: none;
-            font-size: 1.8vw;
+            font-size: 2.5vw;
             margin-top: 6rem;
             color: $color-orange;
             background-color: $color-beige;
@@ -149,7 +149,7 @@ main {
     }
 }
 
-.bg-1 {
+.header_right {
     grid-area: bg-1;
     display: grid;
     grid-template-areas: "shape1"
@@ -245,7 +245,7 @@ main {
     animation: fade-in 3s ease-out infinite;
 }
 
-.bg-1 .circle {
+.header_right .circle {
     @include circle(9rem);
     @include fade-in;
 }
@@ -275,7 +275,9 @@ main {
         width: 20rem;
         border-radius: 50%;
         margin: 0 2rem;
+        box-shadow: -1px -1px 4px $color-beige, 1px 1px 4px $color-beige;
     }
+    
     .intro h3 {
         color: $color-black;
         font-size: 3.5rem;
@@ -351,7 +353,7 @@ main {
     }
 }
 
-.bg-2 {
+.projects_wrapper {
     display: flex;
     margin: 4rem;
     align-items: center;
@@ -420,7 +422,7 @@ main {
     h2 {
         font-size: 4rem;
         padding: 2rem 0;
-        color: $color-green;
+        color: $color-orange;
         text-align: center;
     }
 }
@@ -431,7 +433,7 @@ form {
     width: 60%;
     margin: 1.5rem auto;
     font-size: 2rem;
-    background-color: $color-green;
+    background-color: $color-lightOrange;
     border-radius: 1rem;
     .data_container {
         display: flex;
@@ -546,7 +548,7 @@ footer {
         grid-template-columns: 100%;
     }
 
-    .bg-1 {
+    .header_right {
         display: none;
     }
 
@@ -556,6 +558,24 @@ footer {
             font-size: 8vw;
             color: $color-beige;
             animation: colorful 3s linear 1;
+        }
+    }
+
+    @keyframes grow {
+        0% {
+            transform: scale(1, 1);
+        }
+        20% {
+            transform: scale(1.2, 1.2);
+        }
+        50% {
+            transform: scale(1.5, 1.5);
+        }
+        80% {
+            transform: scale(1.2, 1.2);
+        }
+        100% {
+            transform: scale(1, 1);
         }
     }
 
@@ -601,7 +621,7 @@ footer {
 
 // sec-3 styling
 
-    .bg-2 {
+    .projects_wrapper {
         flex-direction: column;
         position: relative;
     }
