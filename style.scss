@@ -139,11 +139,9 @@ main {
             font-size: 2.5vw;
             margin-top: 6rem;
             color: $color-green;
-            background-color: $color-beige;
             width: fit-content;
             padding: 1rem 1.4rem;
             border-radius: .8rem;
-            box-shadow: -1px -1px 5px $color-beige, 1px 1px 5px $color-beige;
         }
         & a:hover {
             animation: grow 1.5s linear 1;
@@ -228,17 +226,20 @@ main {
     0% {
         opacity: 0;
         transform: scale(0, 0);
-        background-color: $color-beige;
+        border: 0.1rem solid $color-beige;
+        background-color: transparent;
     }
     50% {
         opacity: 0.5;
         transform: scale(0.5, 0.5);
-        background-color: $color-lightGrey;
+        border: 0.1rem solid $color-lightGrey;
+        background-color: transparent;
     }
     100% {
         opacity: 1;
         transform: scale(1, 1);
-        background: $color-green;
+        border: 0.1rem solid $color-green;
+        background-color: transparent;
     }
 }
 
