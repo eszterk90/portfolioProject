@@ -709,7 +709,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 99%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(grey));
   background-image: linear-gradient(to bottom right, grey);
   border-radius: 0.3rem;
