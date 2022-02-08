@@ -55,7 +55,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #24A19C;
+  color: #d7e9a1;
 }
 
 nav a {
@@ -372,7 +372,7 @@ main {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: side_container;
-  background-color: #FAEEE7;
+  background-color: #282727;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,7 +393,7 @@ main {
 }
 
 .side_container .intro h3 {
-  color: #282727;
+  color: #d7e9a1;
   font-size: 3.5rem;
 }
 
@@ -421,7 +421,7 @@ main {
 
 .about p {
   margin: 2rem 0;
-  color: #FAEEE7;
+  color: #d7e9a1;
 }
 
 .skills {
@@ -429,14 +429,14 @@ main {
   -ms-grid-column: 1;
   grid-area: skills;
   padding: 2rem;
-  background-color: #454343;
+  background-color: #d7e9a1;
 }
 
 .skills h3 {
   text-align: center;
   font-size: 3.2rem;
   padding: 2rem;
-  color: #24A19C;
+  color: #d7e9a1;
 }
 
 .skills .skills_container {
@@ -460,7 +460,7 @@ main {
   font-size: 2rem;
   padding: 2rem;
   text-align: center;
-  color: #FAEEE7;
+  color: #282727;
 }
 
 .skills .skills_container .skill h4 {
@@ -488,7 +488,7 @@ main {
 .sec-3 h2 {
   font-size: 4rem;
   padding: 2rem 0;
-  color: #FAEEE7;
+  color: #d7e9a1;
   text-align: center;
 }
 
@@ -575,13 +575,13 @@ main {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: sec-4;
-  background-color: #FAEEE7;
+  background-color: #454343;
 }
 
 .sec-4 h2 {
   font-size: 4rem;
   padding: 2rem 0;
-  color: #C84B31;
+  color: #24A19C;
   text-align: center;
 }
 
@@ -593,10 +593,7 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
-  margin: 1.5rem auto;
   font-size: 2rem;
-  background-color: #e38875;
   border-radius: 1rem;
 }
 
@@ -615,6 +612,7 @@ form .data_container {
 input {
   padding: 0.8rem 4rem;
   border-radius: 0.8rem;
+  background-color: #FAEEE7;
 }
 
 input[type="submit"] {
@@ -633,20 +631,16 @@ input[type="submit"]:hover {
   background-color: #161616;
 }
 
-input:focus, textarea:focus {
-  border: 2px solid #C84B31;
-  outline-style: solid;
-  outline-color: #C84B31;
-}
-
 textarea {
   border-radius: 0.8rem;
   padding: 1rem;
+  background-color: #FAEEE7;
 }
 
 label {
   margin-top: 1rem;
   font-weight: 500;
+  color: #FAEEE7;
 }
 
 footer {

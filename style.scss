@@ -11,6 +11,7 @@
 $color-black: #161616;
 $color-grey: #282727;
 $color-lightGrey: #454343;
+$color-yellow: #d7e9a1;
 $color-blue: #270082;
 $color-lightBlue: #2f0398;
 $color-purple:#7A0BC0;
@@ -59,7 +60,7 @@ nav {
         li a {
             color: $color-beige;
             &:hover {
-                color: $color-green;
+                color: $color-yellow;
             } 
         }
     }
@@ -270,7 +271,7 @@ main {
 
 .side_container {
     grid-area: side_container;
-    background-color: $color-beige;
+    background-color: $color-grey;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -283,7 +284,7 @@ main {
     }
     
     .intro h3 {
-        color: $color-grey;
+        color: $color-yellow;
         font-size: 3.5rem;
     }
 }
@@ -303,7 +304,7 @@ main {
     }
     p {
         margin: 2rem 0;
-        color: $color-beige;
+        color: $color-yellow;
     }
 }
 
@@ -312,12 +313,12 @@ main {
 .skills {
     grid-area: skills;
     padding: 2rem;
-    background-color: $color-lightGrey;
+    background-color: $color-yellow;
     h3 {
         text-align: center;
         font-size: 3.2rem;
         padding: 2rem;
-        color: $color-green;
+        color: $color-yellow;
     }
     .skills_container {
         display: grid;
@@ -330,7 +331,7 @@ main {
             font-size: 2rem;
             padding: 2rem;
             text-align: center;
-            color: $color-beige;
+            color: $color-grey;
             h4 {
                 font-family: 'IBM Plex Mono', monospace;
                 font-weight: 300;
@@ -355,7 +356,7 @@ main {
     h2 {
         font-size: 4rem;
         padding: 2rem 0;
-        color: $color-beige;
+        color: $color-yellow;
         text-align: center;
     }
 }
@@ -425,11 +426,11 @@ main {
 
 .sec-4 {
     grid-area: sec-4;
-    background-color: $color-beige;
+    background-color: $color-lightGrey;
     h2 {
         font-size: 4rem;
         padding: 2rem 0;
-        color: $color-orange;
+        color: $color-green;
         text-align: center;
     }
 }
@@ -437,10 +438,10 @@ main {
 form {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    margin: 1.5rem auto;
+    // width: 50%;
+    // margin: 1.5rem auto;
     font-size: 2rem;
-    background-color: $color-lightOrange;
+    // background-color: $color-lightOrange;
     border-radius: 1rem;
     .data_container {
         display: flex;
@@ -453,6 +454,7 @@ form {
 input {
     padding: 0.8rem 4rem;
     border-radius: 0.8rem;
+    background-color: $color-beige;
 }
 
 input[type="submit"] {
@@ -468,20 +470,16 @@ input[type="submit"] {
     }
 }
 
-input:focus, textarea:focus {
-    border: 2px solid $color-orange;
-    outline-style: solid;
-    outline-color: $color-orange;
-}
-
 textarea {
     border-radius: 0.8rem;
     padding: 1rem; 
+    background-color: $color-beige;
 }
 
 label {
     margin-top: 1rem;
     font-weight: 500;
+    color: $color-beige;
 }
 
 // Footer section styling
