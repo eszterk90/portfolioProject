@@ -595,6 +595,7 @@ main {
 
 .sec-3 h2 {
   font-size: 4rem;
+  margin-top: 4rem;
   padding: 2rem 0;
   color: #d7e9a1;
   text-align: center;
@@ -667,7 +668,15 @@ main {
   color: #d7e9a1;
 }
 
-.projects:hover .click_here {
+.project_container .click_here {
+  display: none;
+}
+
+.project_container .click_here a {
+  display: none;
+}
+
+.project_container:hover .click_here {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: absolute;
@@ -676,12 +685,18 @@ main {
   display: block;
   background-color: #161616;
   border-radius: 0.3rem;
-  z-index: 200;
+  z-index: 100;
 }
 
-.projects:hover .click_here a {
+.project_container:hover .click_here a {
   color: #24A19C;
   font-weight: 100;
+  text-decoration: none;
+  color: #24A19C;
+  margin: 1rem;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .project_container:hover {
@@ -694,7 +709,7 @@ main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 99%;
+  height: 100%;
   background-image: -webkit-gradient(linear, left top, right bottom, from(grey));
   background-image: linear-gradient(to bottom right, grey);
   border-radius: 0.3rem;
@@ -704,19 +719,6 @@ main {
 .project_container img {
   width: 100%;
   border-radius: 0.3rem;
-}
-
-.click_here {
-  display: none;
-}
-
-.click_here a {
-  font-size: 2rem;
-  text-decoration: none;
-  color: #FAEEE7;
-  margin: 1rem;
-  display: inline-block;
-  text-align: center;
 }
 
 .sec-4 {

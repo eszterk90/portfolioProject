@@ -413,6 +413,7 @@ main {
     background-color: $color-grey;
     h2 {
         font-size: $h2-size;
+        margin-top: 4rem;
         padding: 2rem 0;
         color: $color-yellow;
         text-align: center;
@@ -460,8 +461,14 @@ main {
         }
     }
 }
+.project_container .click_here {
+    display: none;
+    a {
+        display: none;
+    }
+}
 
-.projects:hover .click_here {
+.project_container:hover .click_here {
     transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
@@ -469,10 +476,16 @@ main {
     display: block;
     background-color: $color-black;
     border-radius: $border-radius;
-    z-index: 200;
+    z-index: 100;
     a {
         color: $color-green;
         font-weight: 100;
+        @include anchor;
+        margin: 1rem;
+        display: inline-block;
+        text-align: center;
+        font-size: 2rem;
+
     }
 }
 
@@ -484,7 +497,7 @@ main {
         top: 0;
         left: 0;
         width: 100%;
-        height: 99%;
+        height: 100%;
         background-image: linear-gradient(to bottom right, grey);
         border-radius: $border-radius;
         opacity: 0.5;
@@ -496,17 +509,7 @@ main {
     border-radius: $border-radius;
 }
 
-.click_here {
-    display: none;
-    a {
-        font-size: 2rem;
-        text-decoration: none;
-        color: $color-beige;
-        margin: 1rem;
-        display: inline-block;
-        text-align: center;
-    }
-}
+
 
 // sec-4 styling
 
