@@ -1,0 +1,15 @@
+@mixin circle($width) {
+    width: $width;
+    height: $width;
+    -webkit-border-radius: $width/2;
+    -moz-border-radius: $width/2;
+    border-radius: $width/2;
+    -moz-background-clip: border;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+}
+
+@mixin fade-in {
+    -webkit-animation: fade-in 3s ease-out  infinite;
+    animation: fade-in 3s ease-out infinite;
+}
