@@ -199,7 +199,6 @@ p {
 
 .menu-wrap .menu > div > div ul li {
   list-style-type: none;
-  color: #d7e9a1;
   font-size: 1.5rem;
   padding: 1rem;
   display: inline-block;
@@ -207,10 +206,22 @@ p {
 }
 
 .menu-wrap .menu > div > div ul li a {
-  color: inherit;
+  color: #d7e9a1;
   text-decoration: none;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div ul li a:hover {
+  color: #24A19C;
+}
+
+#home {
+  color: #24A19C;
+}
+
+#home:hover {
+  color: #d7e9a1;
 }
 
 main {
@@ -222,52 +233,6 @@ main {
   -ms-grid-rows: 0.5fr 1fr 0.5fr 0.25fr;
       grid-template-rows: 0.5fr 1fr 0.5fr 0.25fr;
   gap: 1rem;
-}
-
-@-webkit-keyframes grow {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  20% {
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  50% {
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
-  }
-  80% {
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-}
-
-@keyframes grow {
-  0% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
-  20% {
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  50% {
-    -webkit-transform: scale(0.5, 0.5);
-            transform: scale(0.5, 0.5);
-  }
-  80% {
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-  }
 }
 
 .sec-1 {
@@ -335,8 +300,9 @@ main {
 }
 
 .sec-1 .header_container a:hover {
-  -webkit-animation: grow 1.5s linear 1;
-          animation: grow 1.5s linear 1;
+  -webkit-transition: border 0.5s linear;
+  transition: border 0.5s linear;
+  border-top: 0.1rem solid #24A19C;
 }
 
 .header_right {
@@ -823,7 +789,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 3rem;
+  padding: 2rem;
   background-color: #161616;
   color: #FAEEE7;
 }

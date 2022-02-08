@@ -159,7 +159,6 @@ p {
 
 .menu-wrap .menu > div > div ul li {
     list-style-type: none;
-    color: $color-yellow;
     font-size: 1.5rem;
     padding: 1rem;
     display: inline-block;
@@ -167,9 +166,19 @@ p {
 }
 
 .menu-wrap .menu > div > div ul li a {
-    color: inherit;
+    color: $color-yellow;;
     text-decoration: none;
     @include transition(color);
+    &:hover {
+        color: $color-green;
+    }
+}
+
+#home {
+    color: $color-green;
+    &:hover {
+        color: $color-yellow;
+    }
 }
 
 // Main layout
@@ -186,24 +195,6 @@ main {
 }
 
 // sec-1 styling
-
-@keyframes grow {
-    0% {
-        transform: scale(1, 1);
-    }
-    20% {
-        transform: scale(0.8, 0.8);
-    }
-    50% {
-        transform: scale(0.5, 0.5);
-    }
-    80% {
-        transform: scale(0.8, 0.8);
-    }
-    100% {
-        transform: scale(1, 1);
-    }
-}
 
 .sec-1 {
     grid-area: sec-1;
@@ -237,7 +228,8 @@ main {
             padding: 1rem 0;
         }
         & a:hover {
-            animation: grow 1.5s linear 1;
+            transition: border 0.5s linear;
+            border-top: 0.1rem solid $color-green;
         }
     }
 }
@@ -563,7 +555,7 @@ main {
 footer {
     @include flex-center;
     flex-direction: column;
-    padding: 3rem;
+    padding: 2rem;
     background-color: $color-black;
     color: $color-beige;
     p {
