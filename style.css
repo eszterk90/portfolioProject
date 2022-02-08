@@ -55,14 +55,15 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #C84B31;
+  color: #24A19C;
 }
 
 nav a {
   text-decoration: none;
   font-size: 2.5rem;
+  font-weight: 300;
   padding: 1rem 2rem;
-  color: #C84B31;
+  color: #24A19C;
 }
 
 nav a:hover {
@@ -371,7 +372,7 @@ main {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: side_container;
-  background-color: #24A19C;
+  background-color: #FAEEE7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -392,7 +393,7 @@ main {
 }
 
 .side_container .intro h3 {
-  color: #161616;
+  color: #282727;
   font-size: 3.5rem;
 }
 
@@ -409,18 +410,18 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 2rem;
-  background-color: #C84B31;
+  background-color: #282727;
 }
 
 .about h2 {
   font-size: 4rem;
   padding: 2rem 0;
-  color: #FAEEE7;
+  color: #24A19C;
 }
 
 .about p {
   margin: 2rem 0;
-  color: #161616;
+  color: #FAEEE7;
 }
 
 .skills {
@@ -428,14 +429,14 @@ main {
   -ms-grid-column: 1;
   grid-area: skills;
   padding: 2rem;
-  background-color: #FAEEE7;
+  background-color: #454343;
 }
 
 .skills h3 {
   text-align: center;
   font-size: 3.2rem;
   padding: 2rem;
-  color: #282727;
+  color: #24A19C;
 }
 
 .skills .skills_container {
@@ -459,19 +460,22 @@ main {
   font-size: 2rem;
   padding: 2rem;
   text-align: center;
-  color: #282727;
+  color: #FAEEE7;
 }
 
 .skills .skills_container .skill h4 {
   font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
 }
 
 .skills .skills_container .skill i {
   font-size: 6rem;
+  font-weight: 200;
 }
 
 .skills .skills_container .skill .star i {
   font-size: 2.5rem;
+  font-weight: 200;
 }
 
 .sec-3 {
@@ -664,21 +668,14 @@ footer {
   color: #FAEEE7;
 }
 
+footer p {
+  font-size: 1.4rem;
+}
+
 .social-links a {
   font-size: 3.5rem;
   margin: 1.2rem;
-}
-
-.social-links a:nth-of-type(1) {
   color: #FAEEE7;
-}
-
-.social-links a:nth-of-type(2) {
-  color: #C84B31;
-}
-
-.social-links a:nth-of-type(3) {
-  color: #24A19C;
 }
 
 @media screen and (max-width: 800px) {

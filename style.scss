@@ -59,15 +59,16 @@ nav {
         li a {
             color: $color-beige;
             &:hover {
-                color: $color-orange;
+                color: $color-green;
             } 
         }
     }
     a {
         text-decoration: none;
         font-size: 2.5rem;
+        font-weight: 300;
         padding: 1rem 2rem;
-        color: $color-orange;
+        color: $color-green;
         &:hover {
             font-weight: bold;
             color: $color-beige;
@@ -269,7 +270,7 @@ main {
 
 .side_container {
     grid-area: side_container;
-    background-color: $color-green;
+    background-color: $color-beige;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -282,7 +283,7 @@ main {
     }
     
     .intro h3 {
-        color: $color-black;
+        color: $color-grey;
         font-size: 3.5rem;
     }
 }
@@ -294,15 +295,15 @@ main {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    background-color: $color-orange;
+    background-color: $color-grey;
     h2 {
         font-size: 4rem;
         padding: 2rem 0;
-        color: $color-beige;
+        color: $color-green;
     }
     p {
         margin: 2rem 0;
-        color: $color-black;
+        color: $color-beige;
     }
 }
 
@@ -311,12 +312,12 @@ main {
 .skills {
     grid-area: skills;
     padding: 2rem;
-    background-color: $color-beige;
+    background-color: $color-lightGrey;
     h3 {
         text-align: center;
         font-size: 3.2rem;
         padding: 2rem;
-        color: $color-grey;
+        color: $color-green;
     }
     .skills_container {
         display: grid;
@@ -329,15 +330,18 @@ main {
             font-size: 2rem;
             padding: 2rem;
             text-align: center;
-            color: $color-grey;
+            color: $color-beige;
             h4 {
                 font-family: 'IBM Plex Mono', monospace;
+                font-weight: 300;
            }
            i {
             font-size: 6rem;
+            font-weight: 200;
            }
            .star i {
             font-size: 2.5rem;
+            font-weight: 200;
            }
         }
     }
@@ -490,20 +494,15 @@ footer {
     padding: 3rem;
     background-color: $color-black;
     color: $color-beige;
+    p {
+        font-size: 1.4rem;
+    }
 }
 
 .social-links a {
     font-size: 3.5rem;
     margin: 1.2rem;
-    &:nth-of-type(1) {
-        color: $color-beige;
-    }
-    &:nth-of-type(2) {
-        color: $color-orange;
-    }
-    &:nth-of-type(3) {
-        color: $color-green;
-    }
+    color: $color-beige;
 }
 
 // tablet version
