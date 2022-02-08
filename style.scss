@@ -1,26 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Major+Mono+Display&display=swap');
 
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-// colors
-
-$color-black: #161616;
-$color-grey: #282727;
-$color-lightGrey: #454343;
-$color-yellow: #d7e9a1;
-$color-blue: #270082;
-$color-lightBlue: #2f0398;
-$color-purple:#7A0BC0;
-$color-orange: #C84B31;
-$color-lightOrange: #e38875;
-$color-darkerPink: #D22779;
-$color-beige: #FAEEE7;
-$color-green: #24A19C;
-$color-darkGreen: #346751;
+@import './resets';
+@import './variables';
+@import './mixins';
 
 html {
     font-size: 62.5%;
@@ -213,28 +195,17 @@ main {
     color: transparent;
 }
 
-@mixin circle($width) {
-    width: $width;
-    height: $width;
-    -webkit-border-radius: $width/2;
-    -moz-border-radius: $width/2;
-    border-radius: $width/2;
-    -moz-background-clip: border;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-}
-
 @keyframes fade-in {
     0% {
         opacity: 0;
         transform: scale(0, 0);
-        border: 0.1rem solid $color-beige;
+        border: 0.1rem solid $color-yellow;
         background-color: transparent;
     }
     50% {
         opacity: 0.5;
         transform: scale(0.5, 0.5);
-        border: 0.1rem solid $color-lightGrey;
+        border: 0.1rem solid $color-yellow;
         background-color: transparent;
     }
     100% {
@@ -243,11 +214,6 @@ main {
         border: 0.1rem solid $color-green;
         background-color: transparent;
     }
-}
-
-@mixin fade-in {
-    -webkit-animation: fade-in 3s ease-out  infinite;
-    animation: fade-in 3s ease-out infinite;
 }
 
 .header_right .circle {
