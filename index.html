@@ -10,14 +10,22 @@
 </head>
 <body>
     <!-- navbar section -->
-    <nav>
-        <a href="./index.html">HOME</a>
-        <ul>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Hire me!</a></li>
-        </ul>
-    </nav>
+    <div class="menu-wrap">
+        <input type="checkbox" class="toggler">
+        <div class="hamburger"><div></div></div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Hire me!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- first header section -->
@@ -118,12 +126,45 @@
                             <i class="far fa-star"></i><i class="far fa-star"></i>
                         </div>
                     </div>
+                    <div class="skill skill5">
+                        <i class="fab fa-js-square"></i>
+                        <h4>JAVASCRIPT</h4>
+                        <div class="star">
+                            <i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill skill6">
+                        <i class="fab fa-react"></i>
+                        <h4>REACT</h4>
+                        <div class="star">
+                            <i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill skill7">
+                        <i class="fab fa-node"></i>
+                        <h4>NODE</h4>
+                        <div class="star">
+                            <i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="skill skill8">
+                        <i class="fab fa-python"></i>
+                        <h4>PYTHON</h4>
+                        <div class="star">
+                            <i class="far fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
             <div class="about">
                 <h2>About me</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt alias aspernatur quibusdam molestias nulla aut, dolorem repudiandae veritatis dolore, placeat, cumque neque ipsam sit! Officiis nostrum earum cum error.</p>
                 <p>Repellendus distinctio excepturi dolore delectus recusandae aspernatur nemo, repellat impedit cupiditate, qui minus architecto voluptates earum fuga facere a possimus rerum quidem voluptatibus quibusdam dolores eligendi doloremque labore! Sit, voluptatibus.</p>
+                <h3>My mission</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ab, tempore minus nihil sunt aperiam, quia itaque in corporis similique repellat beatae labore nemo iusto totam voluptatem distinctio nobis sapiente?
+                Hic amet ducimus magnam doloremque ipsum voluptate veritatis obcaecati sapiente esse et quam suscipit, odio illo aperiam impedit dicta alias eos consequatur quibusdam nisi totam voluptates quae, dolorum velit. Facilis!</p>
             </div>
         </section>
 
@@ -139,6 +180,10 @@
                             <a href="https://github.com/FbW-E10/uib-layout-travel-destination-form-eszterk90" target="_about">Travel Destinations</a>
                         </div>
                     </div>
+                    <div class="description">
+                        <h5>What is this?</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nam ea, perferendis pariatur explicabo illo doloribus! Veritatis quia molestiae qui!</p>
+                    </div>
                 </div>
                 <div class="projects p-2">
                     <div class="project_container">
@@ -147,6 +192,10 @@
                             <a href="https://github.com/FbW-E10/uib-layout-grid-design-studio-eszterk90" target="_about">Design Studio</a>
                         </div>
                     </div> 
+                    <div class="description">
+                        <h5>What is this?</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nam ea, perferendis pariatur explicabo illo doloribus! Veritatis quia molestiae qui!</p>
+                    </div>
                 </div>
                 <div class="projects p-3">
                     <div class="project_container">
@@ -155,41 +204,30 @@
                             <a href="https://github.com/FbW-E10/uib-layout-speaker-shop2-eszterk90" target="_about">Speaker shop</a>
                         </div>
                     </div>
+                    <div class="description">
+                        <h5>What is this?</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nam ea, perferendis pariatur explicabo illo doloribus! Veritatis quia molestiae qui!</p>
+                    </div>
                 </div>
             </div>
+            <div class="project_list"><a href="#">See All</a></div>
         </section>
 
         <!-- Section 4 / Contact -->
         <section class="sec-4" id="contact">
             <h2>Get in touch</h2>
-            <div class="contact_form">
-                <form>
-                    <div class="data_container">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="data_container">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="message">Write me a message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
-                    </div>
-
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-        </section>
-
-        <!-- Footer section -->
-        <footer>
             <div class="social-links">
                 <a href="https://github.com/eszterk90" target="_about"><i class="fab fa-github"></i></a>
                 <a href="https://www.instagram.com/eekadar/" target="_about"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/eszter-kadar-7642146a/"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>All rights reserved 2022 &copy;</p>
+            <p>Whether you have a question or just want to say hi, I’ll do my best to get back to you!</p>
+            <a href="mailto:eszter.kadar1@gmail.com">Say hi!</a>
+        </section>
+
+        <!-- Footer section -->
+        <footer>
+            <p>Designed & Built by Eszter Kadar 2022 &copy;</p>
         </footer>
     </main>
 </body>

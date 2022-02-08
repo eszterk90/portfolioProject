@@ -13,3 +13,28 @@
     -webkit-animation: fade-in 3s ease-out  infinite;
     animation: fade-in 3s ease-out infinite;
 }
+
+@mixin anchor {
+    text-decoration: none;
+    color: $color-green;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin shape-grid-template {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.8fr;
+}
+
+@mixin transition ($property) {
+    transition: $property 0.4s ease;
+}
+
+
+
+
